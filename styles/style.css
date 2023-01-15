@@ -1,0 +1,156 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Common sytyles */
+.dark-text
+{
+    color: #727272;
+}
+.black-text
+{
+    color: #131313;
+}
+.orange-text
+{
+    color: #FF900E;
+}
+.thin-text
+{
+    font-weight: 400;
+}
+.btn-primary {
+    background-color: #FF900E;
+    padding: 20px 25px;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Header section */
+header{
+    background-color: rgba(255, 144, 14, 0.1);
+
+    padding-bottom: 50px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 230px;
+}
+nav h1
+{
+    font-size: 45px;
+    font-weight: 700;
+    color: #131313;
+}
+nav ul
+{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #424242;
+}
+
+/* Banner styles */
+.banner
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 240px;
+}
+.banner-texts
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 100px;
+}
+.banner-texts h1
+{
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    color: #131313;
+}
+.banner-texts p
+{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #727272;
+    margin: 30px 0;
+}
+.banner img
+{
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Features styles */
+.features
+{
+    margin: 85px 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+.features-images
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+.features-texts h1
+{
+    font-size: 45px;
+    font-weight: 500;
+}
+.features-texts p
+{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+
+/* Media queries */
+@media only screen and (max-width : 688px) {
+    /* Navigation */
+    nav{
+        flex-direction: column;
+        padding: 20px 25px;
+    }
+    nav h1{
+        margin-bottom: 20px;
+    }
+    nav ul 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Banner Responsive */
+    .banner
+    {
+        margin: 20px;
+    }
+}
