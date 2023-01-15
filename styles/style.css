@@ -8,6 +8,12 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+/* Temporary class */
+.hide
+{
+    display: none;
+}
+
 /* Common sytyles */
 .dark-text
 {
@@ -120,6 +126,10 @@ nav ul li a
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
+.features-texts
+{
+    width: 100%;
+}
 .features-texts h1
 {
     font-size: 45px;
@@ -133,9 +143,171 @@ nav ul li a
     margin-bottom: 30px;
 }
 
+/* User interests styles */
+.user-interests
+{
+    margin: 50px 240px;
+    display: flex;
+    gap: 54px;
+    /* background-color: rgba(212, 212, 212, 0.2); */
+}
+.interest-title
+{
+    font-size: 45px;
+    font-weight: 700px;
+    padding-left: 24px;
+    border-left: 5px solid #FF900E;
+}
+.interest-desc
+{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.interest-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.interest
+{
+    border-radius: 8px;
+    padding: 30px 33px;
+    background-color: #fff;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06)
+}
+.interest h2
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: #131313;
+    margin-bottom: 10px;
+}
+.interest p
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #727272;
+}
+.interest-img
+{
+    width: 100%;
+}
+.interest-img img{
+    width: 100%;
+}
+.interest-img button
+{
+    position: relative;
+    left: -45px;
+    top: -10%;
+    padding: 45px 42px;
+    color: #FFF;
+}
+.interest-img button p
+{
+    font-size: 65px;
+    font-weight: 700;
+}
+
+/* Styles for fact section */
+.facts
+{
+    margin: 50px 240px;
+}
+.section-title
+{
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
+    margin-bottom: 24px;
+}
+.section-desc
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #727272;
+}
+.fact-list
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    gap: 80px;
+}
+.fact
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 35px;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.fact:hover
+{
+    background-color: rgba(255, 143, 14, 0.1);
+}
+.fact h2
+{
+    font-size: 45px;
+    font-weight: 600;
+    color: #424242;
+    margin: 5px 0;
+}
+.fact p
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: #727272;
+}
+
+/* Styles for sopnsor section */
+.sponsors
+{
+    margin: 80px 240px;
+}
+.sponsors h2, .sponsors p
+{
+    text-align: center;
+}
+.sponsor-list
+{
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.sponsor-list img
+{
+    filter: grayscale(100%);
+}
+
+footer
+{
+    margin: 130px 0;
+}
+.copyright
+{
+    margin: 0 240px;
+    background-color: #FFF4E7;
+    border-radius: 8px;
+    padding: 38px 0;
+    text-align: center;
+    color : #424242;
+    font-size: 20px;
+    font-weight: 400;
+}
 /* Media queries */
-@media only screen and (max-width : 688px) {
-    /* Navigation */
+@media only screen and (max-width : 600px) {
+    /* Navigation section*/
     nav{
         flex-direction: column;
         padding: 20px 25px;
@@ -148,9 +320,102 @@ nav ul li a
         flex-direction: column;
         align-items: center;
     }
-    /* Banner Responsive */
+
+    /* Banner section */
     .banner
     {
-        margin: 20px;
+        margin: 0;
+    }
+    .banner img
+    {
+        width: calc(100% - 20px);
+    }
+
+    /* features section*/
+    .features
+    {
+        width: calc(100% -30px);
+        flex-direction: column;
+        align-items: center;
+        margin: 85px 20px;
+    }
+    .features-images
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .features-images img 
+    {
+        width: 100%;
+    }
+    .features-texts 
+    {
+        width: calc(100% -30px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* user interests section*/
+    .user-interests
+    {
+        flex-direction: column;
+        width: calc(100% -30px);
+        margin: 50px 20px;
+    }
+    .interest-title, .interest-desc
+    {
+        width: calc(100% -20px);
+    }
+    .interest-img
+    {
+        width: calc(100% -20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .interest-img img 
+    {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+    .interest-img button
+    {
+        margin-top: 30px;
+        top: 0;
+        left: 0;
+    }
+
+    /* Fact section */
+    .facts {
+        width: calc(100% -30px);
+        margin: 50px 20px;
+    }
+    .section-title .section-desc
+    {
+        text-align: center;
+    }
+    .fact-list
+    {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Sponsors section */
+    .sponsors {
+        width: calc(100% -30px);
+        margin: 80px 20px;
+    }
+    .sponsor-list
+    {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    /* Footer and copyright section */
+    .copyright
+    {
+        width: calc(100% -30px);
+        margin: 0 20px;
     }
 }
